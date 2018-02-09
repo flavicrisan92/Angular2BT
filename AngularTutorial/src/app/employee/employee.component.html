@@ -1,0 +1,31 @@
+﻿<table *ngIf="employee">
+    <thead>
+        <tr>
+            <th [attr.colspan]="columnSpan">
+                Employee details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Code</td>
+            <td>{{employee.code}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{employee.name}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{employee.gender}}</td>
+        </tr>
+        <tr>
+            <td>DateOfBirth</td>
+            <td>{{employee.dateOfBirth}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+<div *ngIf="!employee">
+    {{statusMessage}}
+</div>
