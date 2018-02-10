@@ -29,3 +29,13 @@
 <div *ngIf="!employee">
     {{statusMessage}}
 </div>
+<div style="margin-top:5px">
+    <input type="button" class="btn btn-primary"
+           value="Back to employee list"
+           (click)="onBackButtonClick()" />
+</div>
+<div *ngIf="!subscription.closed" style="margin-top:5px">
+    <input type="button" class="btn btn-primary"
+           value="Cancel request"
+           (click)="onCancelButton()"/>
+</div>
